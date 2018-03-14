@@ -22,6 +22,8 @@ public class Main {
         // 4) input = 8;
         // 5) abacabba;
         // 6) one=abba; two=caba;
+
+       /*Count quantity all uniq letters.*/
         Map<Character, Integer> map = new HashMap<Character, Integer>();
         char newChar[] = input.toCharArray();
 
@@ -34,6 +36,17 @@ public class Main {
         }
 
         map.forEach((k, v) -> System.out.println("Key : " + k + " Value : " + v));
+
+        /*Sort by value ASC.*/
+        Map<Character, Integer> sortedByValueMap = null;
+
+        /*Sort by value Desc.*/
+
+
+        /* Assign cipher to key*/
+
+
+        /* Display quantity letters in the String*/
 
 
         return null;
