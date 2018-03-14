@@ -9,33 +9,34 @@ public class Main {
 
     public static void main(String[] args) {
         // write your code here
-        encode("abbacaba");
+        encode("abbacbba");
 
 
     }
 
     public static String encode(String input) {
 
-        // 1) a-4, b-3, c-1;
+        // 1) b-4, a-3, c-1;
         // 2) a-1, b-01, c-001;
         // 3) 1010110011011
-        Map<String, Integer> map = new HashMap<String, Integer>();
-        char newChar[]= input.toCharArray();
-        int count=0;
-        String key=null;
-        for (char value: newChar ) {
-            for (int i = 0; i < newChar.length ; i++) {
-                if(newChar[i]==newChar[i+1]){
-                    key= String.valueOf(newChar[i]);
-                    map.put(key,count++);
-                }
+        // 4) input = 8;
+        // 5) abacabba;
+        // 6) one=abba; two=caba;
+        Map<Character, Integer> map = new HashMap<Character, Integer>();
+        char newChar[] = input.toCharArray();
+
+        for (char value : newChar) {
+            if (map.get(value) == null) {
+                map.put(value, 1);
+            } else {
+                map.put(value, map.get(value) + 1);
             }
-
-            map.forEach((k,v)->System.out.println("Key : " + k + " Value : " + v));
-
-
         }
+
+        map.forEach((k, v) -> System.out.println("Key : " + k + " Value : " + v));
+
+
         return null;
     }
 
-}
+    }
