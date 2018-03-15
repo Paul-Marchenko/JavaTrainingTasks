@@ -11,6 +11,7 @@ public class Main {
         // write your code here
         encode("abbacbba");
         multiplicationTable(10);
+        piramide(8, 10);
 
 
     }
@@ -54,18 +55,29 @@ public class Main {
     }
 
     public static void multiplicationTable(int limit) {
-
+        System.out.println();
+        System.out.println("Multiplication Table for " + limit);
         int result = 1;
         for (int i = 1; i <= limit; i++) {
             for (int j = 1; j <= limit; j++) {
                 result = i * j;
-
-                System.out.print(result);
-
-
+                System.out.print(result + " ");
+                if (j == limit) {
+                    System.out.println();
+                }
             }
+        }
+    }
 
+    public static void piramide(int element, int quantityOfElements) {
+        System.out.println();
+        System.out.println("Pyramide like triangle with " + element + " number");
+
+        for (int i = 0; i < quantityOfElements; i++) {
+            String stringElement=String.valueOf(element);
+            System.out.println(stringElement);
 
         }
+
     }
 }
