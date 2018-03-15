@@ -10,6 +10,7 @@ public class Main {
     public static void main(String[] args) {
         // write your code here
         encode("abbacbba");
+        multiplicationTable(10);
 
 
     }
@@ -52,4 +53,19 @@ public class Main {
         return null;
     }
 
+    public static void multiplicationTable(int limit) {
+
+        int result = 1;
+        for (int i = 1; i <= limit; i++) {
+            for (int j = 1; j <= limit; j++) {
+                result = i * j;
+
+                System.out.print(result);
+
+
+            }
+
+
+        }
     }
+}
