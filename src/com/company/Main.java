@@ -9,9 +9,10 @@ public class Main {
 
     public static void main(String[] args) {
         // write your code here
-        encode("abbacbba");
+        encode("Abbacbba");
         multiplicationTable(10);
-        piramide(8, 10);
+        triangle(8, 10);
+        flippedOver(8,10);
 
 
     }
@@ -27,7 +28,7 @@ public class Main {
 
        /*Count quantity all uniq letters.*/
         Map<Character, Integer> map = new HashMap<Character, Integer>();
-        char newChar[] = input.toCharArray();
+        char newChar[] = input.toLowerCase().toCharArray();
 
         for (char value : newChar) {
             if (map.get(value) == null) {
@@ -55,7 +56,7 @@ public class Main {
     }
 
     public static void multiplicationTable(int limit) {
-        System.out.println();
+        System.out.println("____________________________________________");
         System.out.println("Multiplication Table for " + limit);
         int result = 1;
         for (int i = 1; i <= limit; i++) {
@@ -69,15 +70,29 @@ public class Main {
         }
     }
 
-    public static void piramide(int element, int quantityOfElements) {
-        System.out.println();
+    public static void triangle(int element, int quantityOfElements) {
+        System.out.println("____________________________________________");
         System.out.println("Pyramide like triangle with " + element + " number");
+        String stringElement=String.valueOf(element);
+        String added=String.valueOf(element);
+        for (int i = 1; i <= quantityOfElements; i++) {
 
-        for (int i = 0; i < quantityOfElements; i++) {
-            String stringElement=String.valueOf(element);
             System.out.println(stringElement);
+            stringElement=stringElement+added;
 
         }
+
+    }
+    public static void flippedOver(int element, int quantityOfElements) {
+        System.out.println("____________________________________________");
+        System.out.println("Pyramide like flippedOverTriangle with " + element + " number");
+        String point=String.valueOf(element);
+        String added=String.valueOf(element);
+        for (int i = quantityOfElements; i > 0; i--) {
+            System.out.println(point);
+            point=point+added;
+        }
+
 
     }
 }
