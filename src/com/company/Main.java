@@ -12,7 +12,7 @@ public class Main {
         encode("Abbacbba");
         multiplicationTable(10);
         triangle(8, 10);
-        flippedOver(8,10);
+        flippedOver(8, 10);
 
 
     }
@@ -73,26 +73,30 @@ public class Main {
     public static void triangle(int element, int quantityOfElements) {
         System.out.println("____________________________________________");
         System.out.println("Pyramide like triangle with " + element + " number");
-        String stringElement=String.valueOf(element);
-        String added=String.valueOf(element);
+        String stringElement = String.valueOf(element);
+        String added = String.valueOf(element);
         for (int i = 1; i <= quantityOfElements; i++) {
 
             System.out.println(stringElement);
-            stringElement=stringElement+added;
+            stringElement = stringElement + added;
 
         }
 
     }
+
     public static void flippedOver(int element, int quantityOfElements) {
         System.out.println("____________________________________________");
         System.out.println("Pyramide like flippedOverTriangle with " + element + " number");
-        String point=String.valueOf(element);
-        String added=String.valueOf(element);
-        for (int i = quantityOfElements; i > 0; i--) {
+        String point = String.valueOf(element);
+        String added = String.valueOf(element);
+        String gap = " ";
+        for (int i = 1; i <= quantityOfElements; i++) {
+
+            for (int j = 1; j <= quantityOfElements - i; j++) {
+                System.out.print(gap);
+            }
             System.out.println(point);
-            point=point+added;
+            point = point + added;
         }
-
-
     }
 }
