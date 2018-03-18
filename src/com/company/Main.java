@@ -75,14 +75,22 @@ public class Main {
         System.out.println("____________________________________________");
         System.out.println("Divided Table for " + limit);
         int result = 1;
+        int j=1;
         for (int i = 1; i <= limit; i++) {
-            for (int j = 1; j <= limit; j++) {
-                result = i * j;
-                System.out.print(result + " ");
-                if (j == limit) {
-                    System.out.println();
+            while (j > 1){
+            for (j = 0; j <= limit; j++) {
+
+                    result = j / i;
+                    System.out.print(result + " ");
+
+                    if (j == limit) {
+                        System.out.println();
+                    }
+
                 }
+
             }
+            j++;
         }
     }
 
