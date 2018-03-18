@@ -11,6 +11,7 @@ public class Main {
         // write your code here
         encode("Abbacbba");
         multiplicationTable(10);
+        dividedTable(10);
         triangle(8, 10);
         flippedOver(8, 10);
 
@@ -58,6 +59,21 @@ public class Main {
     public static void multiplicationTable(int limit) {
         System.out.println("____________________________________________");
         System.out.println("Multiplication Table for " + limit);
+        int result = 1;
+        for (int i = 1; i <= limit; i++) {
+            for (int j = 1; j <= limit; j++) {
+                result = i * j;
+                System.out.print(result + " ");
+                if (j == limit) {
+                    System.out.println();
+                }
+            }
+        }
+    }
+
+    public static void dividedTable(int limit) {
+        System.out.println("____________________________________________");
+        System.out.println("Divided Table for " + limit);
         int result = 1;
         for (int i = 1; i <= limit; i++) {
             for (int j = 1; j <= limit; j++) {
