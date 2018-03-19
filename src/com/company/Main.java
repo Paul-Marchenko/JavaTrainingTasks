@@ -12,6 +12,7 @@ public class Main {
         encode("Abbacbba");
         multiplicationTable(10);
         dividedTable(10);
+        factorial(5);
         triangle(8, 10);
         flippedOver(8, 10);
 
@@ -74,15 +75,16 @@ public class Main {
     public static void dividedTable(int limit) {
         System.out.println("____________________________________________");
         System.out.println("Divided Table for " + limit);
-        int result=1;
+        int result = 1;
         int j;
         int i;
 
 
         for (i = 1; i <= limit; i++) {
             for (j = 1; j <= limit; j++) {
+
                 while (result % 10 == 0) {
-                result = j / i;
+                    result = j / i;
 
                     System.out.print(result + " ");
 
@@ -99,6 +101,15 @@ public class Main {
 
     }
 
+    public static void factorial(int value) {
+        int coeficient = 1;
+        for (int i = 1; i <= value; i++) {
+            coeficient = coeficient * i;
+
+        }
+        System.out.println(coeficient);
+
+    }
 
     public static void triangle(int element, int quantityOfElements) {
         System.out.println("____________________________________________");
