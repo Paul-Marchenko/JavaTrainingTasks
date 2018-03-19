@@ -11,8 +11,9 @@ public class Main {
         // write your code here
         encode("Abbacbba");
         multiplicationTable(10);
+        dividedTable(10);
         triangle(8, 10);
-        flippedOver(8,10);
+        flippedOver(8, 10);
 
 
     }
@@ -26,7 +27,7 @@ public class Main {
         // 5) abacabba;
         // 6) one=abba; two=caba;
 
-       /*Count quantity all uniq letters.*/
+        /*Count quantity all uniq letters.*/
         Map<Character, Integer> map = new HashMap<Character, Integer>();
         char newChar[] = input.toLowerCase().toCharArray();
 
@@ -70,29 +71,62 @@ public class Main {
         }
     }
 
-    public static void triangle(int element, int quantityOfElements) {
+    public static void dividedTable(int limit) {
         System.out.println("____________________________________________");
-        System.out.println("Pyramide like triangle with " + element + " number");
-        String stringElement=String.valueOf(element);
-        String added=String.valueOf(element);
-        for (int i = 1; i <= quantityOfElements; i++) {
+        System.out.println("Divided Table for " + limit);
+        int result=1;
+        int j;
+        int i;
 
-            System.out.println(stringElement);
-            stringElement=stringElement+added;
+
+        for (i = 1; i <= limit; i++) {
+            for (j = 1; j <= limit; j++) {
+                while (result % 10 == 0) {
+                result = j / i;
+
+                    System.out.print(result + " ");
+
+                    if (j == limit) {
+                        System.out.println();
+                    }
+                    j = j + 1;
+                    i = i + 1;
+                }
+
+            }
 
         }
 
     }
+
+
+    public static void triangle(int element, int quantityOfElements) {
+        System.out.println("____________________________________________");
+        System.out.println("Pyramide like triangle with " + element + " number");
+        String stringElement = String.valueOf(element);
+        String added = String.valueOf(element);
+        for (int i = 1; i <= quantityOfElements; i++) {
+
+            System.out.println(stringElement);
+            stringElement = stringElement + added;
+
+        }
+
+    }
+
     public static void flippedOver(int element, int quantityOfElements) {
         System.out.println("____________________________________________");
         System.out.println("Pyramide like flippedOverTriangle with " + element + " number");
-        String point=String.valueOf(element);
-        String added=String.valueOf(element);
-        for (int i = quantityOfElements; i > 0; i--) {
+        String point = String.valueOf(element);
+        String added = String.valueOf(element);
+        String gap = " ";
+        for (int i = 1; i <= quantityOfElements; i++) {
+
+            for (int j = 1; j <= quantityOfElements - i; j++) {
+                System.out.print(gap);
+            }
             System.out.println(point);
-            point=point+added;
+            point = point + added;
         }
-
-
     }
 }
