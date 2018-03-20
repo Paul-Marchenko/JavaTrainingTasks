@@ -11,10 +11,13 @@ public class Main {
         // write your code here
         encode("Abbacbba");
         multiplicationTable(10);
-        dividedTable(10);
+
         factorial(5);
+
         triangle(8, 10);
         flippedOver(8, 10);
+        dividedTable(10);
+        fibonachi(5);
 
 
     }
@@ -78,11 +81,11 @@ public class Main {
         int result = 1;
         int j;
         int i;
-
+        int coeficient = 1;
 
         for (i = 1; i <= limit; i++) {
             for (j = 1; j <= limit; j++) {
-
+                coeficient = ((j + 1) / (i + 1));
                 while (result % 10 == 0) {
                     result = j / i;
 
@@ -102,6 +105,8 @@ public class Main {
     }
 
     public static void factorial(int value) {
+        System.out.println("____________________________________________");
+        System.out.println("Factorial " + value);
         int coeficient = 1;
         for (int i = 1; i <= value; i++) {
             coeficient = coeficient * i;
@@ -110,6 +115,29 @@ public class Main {
         System.out.println(coeficient);
 
     }
+
+    public static void fibonachi(int value) {
+        System.out.println("____________________________________________");
+        System.out.println("Fibonachi " + value);
+        int coeficient = 0;
+        int k = 0;
+        int x = 0;
+
+        for (int j = 1; j <= value; j++) {
+
+x=k;
+            coeficient = coeficient + x;
+            k = x;
+            System.out.print(coeficient + " ");
+
+            x = coeficient;
+            k = 1;
+
+
+        }
+
+    }
+
 
     public static void triangle(int element, int quantityOfElements) {
         System.out.println("____________________________________________");
