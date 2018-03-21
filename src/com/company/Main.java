@@ -1,9 +1,6 @@
 package com.company;
 
-import java.util.Collection;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
 public class Main {
 
@@ -121,21 +118,15 @@ public class Main {
         System.out.println("Fibonachi " + value);
         int coeficient = 0;
         int k = 0;
-        int x = 0;
+        int x = 1;
+        for (int i = 0; i <= value; i++) {
 
-        for (int j = 1; j <= value; j++) {
+            coeficient = k + x;
 
-x=k;
-            coeficient = coeficient + x;
-            k = x;
             System.out.print(coeficient + " ");
-
+            k = x;
             x = coeficient;
-            k = 1;
-
-
         }
-
     }
 
 
