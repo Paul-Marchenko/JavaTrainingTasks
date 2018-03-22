@@ -13,8 +13,9 @@ public class Main {
 
         triangle(8, 10);
         flippedOver(8, 10);
-        dividedTable(10);
         fibonachi(5);
+        dividedTable(10);
+
 
 
     }
@@ -82,8 +83,8 @@ public class Main {
 
         for (i = 1; i <= limit; i++) {
             for (j = 1; j <= limit; j++) {
-                coeficient = ((j + 1) / (i + 1));
-                while (result % 10 == 0) {
+                coeficient = ((j + 1) / (i));
+                if (result % 10 == 0) {
                     result = j / i;
 
                     System.out.print(result + " ");
@@ -91,8 +92,7 @@ public class Main {
                     if (j == limit) {
                         System.out.println();
                     }
-                    j = j + 1;
-                    i = i + 1;
+
                 }
 
             }
@@ -133,6 +133,7 @@ public class Main {
             k = x;
             x = coeficient;
         }
+        System.out.println();
     }
 
 
