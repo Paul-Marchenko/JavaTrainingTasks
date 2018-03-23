@@ -17,7 +17,6 @@ public class Main {
         dividedTable(10);
 
 
-
     }
 
     public static String encode(String input) {
@@ -83,17 +82,16 @@ public class Main {
 
         for (i = 1; i <= limit; i++) {
             for (j = 1; j <= limit; j++) {
+
+
+                result = coeficient / i;
+
+                System.out.print(result + " ");
                 coeficient = ((j + 1) / (i));
-                if (result % 10 == 0) {
-                    result = j / i;
-
-                    System.out.print(result + " ");
-
-                    if (j == limit) {
-                        System.out.println();
-                    }
-
+                if (j == limit) {
+                    System.out.println();
                 }
+
 
             }
 
@@ -120,11 +118,11 @@ public class Main {
         int k = 0;
         int x = 1;
         for (int i = 0; i <= value; i++) {
-            if (i==0){
-                System.out.print(0+" ");
+            if (i == 0) {
+                System.out.print(0 + " ");
             }
-            if (i==1){
-                System.out.print(1 +" ");
+            if (i == 1) {
+                System.out.print(1 + " ");
             }
 
             coeficient = k + x;
