@@ -78,23 +78,24 @@ public class Main {
         int result = 1;
         int j;
         int i;
-        int coeficient = 1;
+        int coeficient = 0;
 
         for (i = 1; i <= limit; i++) {
             for (j = 1; j <= limit; j++) {
 
-                while ((j % i == 0) & (j / i > 0)) {
-                    result = coeficient / i;
+                result = (j+coeficient) / i;
+                System.out.print(result + " ");
 
-                    System.out.print(result + " ");
-
-                    coeficient = ((j + 1) / (i));
-                    if (j == limit) {
-                        System.out.println();
-                    }
+                if (j == limit) {
+                    System.out.println();
                 }
 
+
             }
+            coeficient=coeficient+1;
+
+
+
 
         }
 
