@@ -92,7 +92,7 @@ public class Main {
 
 
             }
-            coeficient=coeficient+1;
+            coeficient=1;
 
 
 
