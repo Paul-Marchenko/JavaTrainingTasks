@@ -82,20 +82,24 @@ public class Main {
 
         for (i = 1; i <= limit; i++) {
             for (j = 1; j <= limit; j++) {
+                do {
+                    if ((i > 0) & (j > 0)) {
 
-                result = (j+coeficient) / i;
-                System.out.print(result + " ");
 
-                if (j == limit) {
-                    System.out.println();
+                        result = ((j + coeficient) + i) / i + coeficient;
+                        System.out.print(result + " ");
+
+                        if (j == limit) {
+                            System.out.println();
+                        }
+
+                        coeficient ++;
+                    }
                 }
+                while (j<=limit);
 
 
             }
-            coeficient=1;
-
-
-
 
         }
 
