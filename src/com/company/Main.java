@@ -93,7 +93,7 @@ public class Main {
                             System.out.println();
                         }
 
-                        coeficient ++;
+                        coeficient =1;
                     }
                 }
                 while (j<=limit);
