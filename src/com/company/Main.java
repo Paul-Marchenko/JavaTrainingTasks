@@ -1,9 +1,6 @@
 package com.company;
 
-import java.util.Collection;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
 public class Main {
 
@@ -11,9 +8,13 @@ public class Main {
         // write your code here
         encode("Abbacbba");
         multiplicationTable(10);
-        dividedTable(10);
+
+        factorial(5);
+
         triangle(8, 10);
         flippedOver(8, 10);
+        fibonachi(5);
+        dividedTable(10);
 
 
     }
@@ -27,7 +28,7 @@ public class Main {
         // 5) abacabba;
         // 6) one=abba; two=caba;
 
-       /*Count quantity all uniq letters.*/
+        /*Count quantity all uniq letters.*/
         Map<Character, Integer> map = new HashMap<Character, Integer>();
         char newChar[] = input.toLowerCase().toCharArray();
 
@@ -75,24 +76,69 @@ public class Main {
         System.out.println("____________________________________________");
         System.out.println("Divided Table for " + limit);
         int result = 1;
-        int j=1;
-        for (int i = 1; i <= limit; i++) {
-            while (j > 1){
-            for (j = 0; j <= limit; j++) {
+        int j;
+        int i;
+        int coeficient = 0;
 
-                    result = j / i;
-                    System.out.print(result + " ");
+        for (i = 1; i <= limit; i++) {
+            for (j = 1; j <= limit; j++) {
 
-                    if (j == limit) {
-                        System.out.println();
+                    if ((i > 0) & (j > 0)) {
+
+
+                        result = ((j + coeficient) + i) / i + coeficient;
+                        System.out.print(result + " ");
+
+                        if (j == limit) {
+                            System.out.println();
+                        }
+
+                        coeficient =1;
                     }
 
-                }
+
 
             }
-            j++;
+
         }
+
     }
+
+    public static void factorial(int value) {
+        System.out.println("____________________________________________");
+        System.out.println("Factorial " + value);
+        int coeficient = 1;
+        for (int i = 1; i <= value; i++) {
+            coeficient = coeficient * i;
+
+        }
+        System.out.println(coeficient);
+
+    }
+
+    public static void fibonachi(int value) {
+        System.out.println("____________________________________________");
+        System.out.println("Fibonachi " + value);
+        int coeficient = 0;
+        int k = 0;
+        int x = 1;
+        for (int i = 0; i <= value; i++) {
+            if (i == 0) {
+                System.out.print(0 + " ");
+            }
+            if (i == 1) {
+                System.out.print(1 + " ");
+            }
+
+            coeficient = k + x;
+
+            System.out.print(coeficient + " ");
+            k = x;
+            x = coeficient;
+        }
+        System.out.println();
+    }
+
 
     public static void triangle(int element, int quantityOfElements) {
         System.out.println("____________________________________________");
