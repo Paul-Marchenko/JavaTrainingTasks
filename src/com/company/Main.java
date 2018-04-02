@@ -8,9 +8,7 @@ public class Main {
         // write your code here
         encode("Abbacbba");
         multiplicationTable(10);
-
         factorial(5);
-
         triangle(8, 10);
         flippedOver(8, 10);
         fibonachi(5);
@@ -168,5 +166,8 @@ public class Main {
             System.out.println(point);
             point = point + added;
         }
+    }
+    public static void oddNumber(){
+
     }
 }
