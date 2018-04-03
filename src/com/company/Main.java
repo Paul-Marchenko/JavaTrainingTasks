@@ -12,6 +12,7 @@ public class Main {
         triangle(8, 10);
         flippedOver(8, 10);
         fibonachi(5);
+        oddNumber(3400);
         dividedTable(10);
 
 
@@ -167,7 +168,9 @@ public class Main {
             point = point + added;
         }
     }
-    public static void oddNumber(){
+    public static void oddNumber(int number){
+
+
 
     }
 }
