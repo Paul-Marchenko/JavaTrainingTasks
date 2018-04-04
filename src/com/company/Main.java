@@ -1,5 +1,7 @@
 package com.company;
 
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
 import java.util.*;
 
 public class Main {
@@ -13,6 +15,7 @@ public class Main {
         flippedOver(8, 10);
         fibonachi(5);
         oddNumber(3400);
+        leastDivisor();
         dividedTable(10);
 
 
@@ -172,5 +175,9 @@ public class Main {
 
 
 
+    }
+
+    public static void leastDivisor(){
+        BufferedReader readerFromConsole =new BufferedReader(new InputStreamReader(System.in));
     }
 }
