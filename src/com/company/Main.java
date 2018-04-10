@@ -16,9 +16,13 @@ public class Main {
         fibonachi(5);
         oddNumber(3400);
         leastDivisor();
+        canBeDivededToNumber(3);
         dividedTable(10);
 
 
+    }
+
+    public static void canBeDivededToNumber(int i) {
     }
 
     public static String encode(String input) {
